@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Meal Plan Generator</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+   </head>
+   <body>
+      <h1>Meal Plan Generator</h1>
+      <form>
+         <label for="budget">Weekly Budget:</label>
+         <input type="number" name="budget" id="budget" required><br>
+
+         <label for="calories">Weekly Calorie Goal:</label>
+         <input type="number" name="calories" id="calories" required><br>
+
+         <button type="button" onclick="generatePlan()">Generate Meal Plan</button>
+         <button type="button" onclick="editMenu()">Edit Menu Items</button>
+      </form>
+
+      <div id="plan">
+         <!-- Meal plan table will be added here -->
+      </div>
+
+      <div id="menu-modal">
+         <div id="menu-container">
+            <table id="menu-table">
+               <thead>
+                  <tr>
+                     <th>Item name</th>
+                     <th>Calories</th>
+                     <th>Price</th>
+                     <th></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <!-- Existing menu items will be added here -->
+               </tbody>
+            </table>
+            <button type="button" onclick="addMenuItem()">Add Item</button>
+            <button type="button" onclick="saveMenu()">Save Changes</button>
+            <button type="button" onclick="hideModal()">Cancel</button>
+         </div>
+      </div>
+
+      <script type="text/javascript" src="script.js"></script>
+   </body>
+</html>
